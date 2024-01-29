@@ -1,0 +1,75 @@
+TASK 1:
+Write a blog on Difference between HTTP1.1 vs HTTP2
+
+The purpose of HTTP is to establish connection between the 
+client and server. 
+Client is basically a browser and server probably cloud. 
+The connection between client and server is done by request response
+
+
+PROCESS
+
+      => The HTTP request from client is sent to server tcp connection is established 
+      => The server gets the request and runs application 
+      => Server returns HTTP response to browser 
+
+For the above process due to limitation HTTP version was established 
+
+HTTP 1.1 vs HTTP 2
+
+In HTTP1.1 when the connection is established the request is sent to server only 
+after the response from server to client another request can be made. 
+In parallel six TCP connection can be sent. 
+
+This makes longer to load and impact performance of the browser 
+To overcome this in HTTP2 a single secure TCP connection is established 
+were streams are created and HTTP request is sent as stream. 
+
+This makes browser fast no need to wait for response and wait for new TCP connection.
+In HTTP1.1 the header is sent with each request to overcome this 
+in HTTP2 HPACK was introduced to separate header and plain text. 
+This comprise the header avoids redundancy.
+   
+
+
+
+
+
+
+
+
+TASK 2: 
+      
+ Write a blog about objects and its internal representation in Javascript
+
+OBJECTS : 
+
+We know what variables is, variable is used to store Data.
+Objects are similar to variables but here we can store multile data.
+
+FOR EXAMPLE :  
+
+var a="guvi";                              //Declaring variable, here we are storing value 
+
+var obj={
+name:"swe",
+course:"fullstack"}                        //Declaring object, here also we are storing values but we can store multiple values. 
+
+
+OBJECT Representation
+
+var obj=key:value;                              // syntax
+
+key should always be string or symbol 
+We can access object by objectName.key or objectName[key]
+
+EXAMPLE: 
+var details={
+location:"chennai",
+college:"panimalar",
+department:"computer science"
+}
+console.log(details.college)                 // accessing object 
+details.year=2020                            // adding property to object
+
+
